@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.recipe-container h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.recipe-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.description, .ingredients, .rating-form {
+    margin-top: 20px;
+}
+
+.description h2, .ingredients h2 {
+    font-size: 24px;
+    color: #444;
+}
+
+.description p, .ingredients ul {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.ingredients ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.rating-summary {
+    margin-top: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.rating-summary .stars {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.rating-form h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.rating-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rating-form select {
+    width: 150px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.rating-form button {
+    width: 160px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rating-form button:hover {
+    background-color: darkorange;
+}
+
+.message {
+    color: green;
+    font-weight: bold;
+}
+
+.login-warning {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.comments-section {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 15px;
+    margin-bottom: 15px;
+    resize: vertical;
+    font-size: 1.1rem;
+    border: 2px solid #5cb85c;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    outline: none;
+    border-color: #4cae4c;
+    box-shadow: 0 0 8px rgba(76,174,76,0.4);
+}
+
+.comment-form button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    width: 160px;
+    align-self: flex-end;
+}
+
+.comment-form button:hover {
+    background-color: #4cae4c;
+}
+
+.comment {
+    background: #e9f5e9;
+    border-left: 6px solid #5cb85c;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c662d;
+    transition: background-color 0.3s ease;
+}
+
+.comment:hover {
+    background: #d3e8d3;
+}
+
+.comment p {
+    margin: 8px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.comment p:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2a542a;
+}
+
+.comment p:last-child {
+    color: #444;
+    font-style: italic;
+}
+
+.comment-date {
+    font-size: 0.85rem;
+    color: #666;
+    margin-left: 10px;
+    font-weight: 400;
+}

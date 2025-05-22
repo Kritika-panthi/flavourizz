@@ -1,0 +1,212 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.headerCat {
+  text-align: center;
+  font-size: 90px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: #a966c4;
+  background-image: url(${pageContext.request.contextPath}/images/cooking-banner-7166200_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 20px;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.headerCatbody {
+  font-size: 20px;
+  color: #f0f0f0;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px 40px;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.headerRep {
+  display: flex;               /* Enable Flexbox */
+  justify-content: center;     /* Horizontally center the image */
+  align-items: center;         /* Vertically center the image */
+  height: 300px;               /* Optional: Set the height of the container */
+}
+
+.header-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+.filter-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end; /* moves the dropdown to the right */
+  padding-right: 50px; /* adjust this value as needed */
+}
+
+  
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    padding: 15px 30px; /* Increase the padding for a bigger button */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px; /* Increase the font size */
+}
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .dropdown-menu label {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .header{
+    text-align: center;/* aligning center*/
+    font-size: 80px;/* inserting font size */
+    margin: 50px auto;/* inserting margin*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.search-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  margin: 30px 0; /* Add space above and below */
+}
+
+#searchInput {
+  padding: 14px 20px; /* Bigger input */
+  font-size: 18px;    /* Larger text */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  width: 400px;       /* Wider input */
+  transition: 0.3s ease-in-out;
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+}
+
+#search {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 14px; /* Bigger button */
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#search:hover {
+  background-color: #218838;
+}
+
+  .gallery {
+    width: 80%;
+    margin: 70px auto;
+    display: flex;/* using display flex to display horizontally*/
+    flex-wrap: wrap;/* flex wrap displays the content to another line if there isnt enough space*/
+    justify-content: space-between;/* this creates space between two images*/
+  }
+  
+  .card {
+    width: calc(33.33% - 50px); /* Same width calculation */
+    margin: 20px; /* Space between cards */
+    box-sizing: border-box; /* Include padding and border in width */
+    background-color: #fffffff4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 15px; /* Add this line for rounded corners */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 5px 5px 5px; /* Shadow size */
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3; /* Keeps consistent image ratio */
+    object-fit: cover;
+    border-radius: 15px; /* Add this line for rounded corners on images */
+  }
+  
+  .card-body {
+    padding: 1em;/*padding will be added to all four sides and its size will be the same as the current font size*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .stars {
+    margin-top: 10px;
+  }
+  
+  .stars i {
+    color: #ffcc00; /* Gold color for the stars */
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+
+
+  

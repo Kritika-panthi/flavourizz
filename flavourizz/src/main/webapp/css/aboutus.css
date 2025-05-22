@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Animations for testimonial cards */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+
+
+.about-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-section h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #a54fc4;
+}
+
+.about-section .tagline {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    color: #444;
+    margin-top: 30px;
+}
+
+.about-content p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.about-content ul {
+    padding-left: 20px;
+}
+
+.about-content ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.about-content h2:hover {
+    color: #a54fc4;
+    transition: 0.3s;
+  }
+  
+  /* List item hover */
+  .about-content ul li:hover {
+    color: #a54fc4;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+/* Main testimonial section */
+.testimonials {
+    margin-top: 60px;
+    text-align: center;
+    opacity: 0;  /* Hidden by default */
+    transform: translateY(20px);  /* Position below */
+    animation: fadeIn 1s ease-out forwards;  /* Fade-in effect */
+    animation-delay: 0.5s; /* Delay the animation for smooth load */
+}
+
+/* Individual testimonial card animations */
+.testimonial-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    opacity: 0;  /* Hidden by default */
+    transform: translateY(30px);  /* Start from below */
+    animation: slideInUp 1s ease-out forwards;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add a delay for each card for staggered animation */
+.card:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.card:nth-child(2) {
+    animation-delay: 0.7s;
+}
+.card:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.card h4 {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #a54fc4;
+}
+
+/* Stronger hover effect for the testimonial card */
+.card:hover {
+    transform: translateY(-20px) rotate(5deg);  /* Increased movement and rotation */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);  /* Stronger shadow */
+}
